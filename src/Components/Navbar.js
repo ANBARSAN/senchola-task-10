@@ -1,0 +1,63 @@
+
+import React, { useState } from "react";
+import Logo from "../Assets/logo.png";
+import { BsCart2 } from "react-icons/bs";
+import { HiOutlineBars3 } from "react-icons/hi2";
+import Box from "@mui/material/Box";
+import Drawer from "@mui/material/Drawer";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
+import ListItem from "@mui/material/ListItem";
+import ListItemButton from "@mui/material/ListItemButton";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import ListItemText from "@mui/material/ListItemText";
+import HomeIcon from "@mui/icons-material/Home";
+import InfoIcon from "@mui/icons-material/Info";
+import CommentRoundedIcon from "@mui/icons-material/CommentRounded";
+import ShoppingCartRoundedIcon from "@mui/icons-material/ShoppingCartRounded";
+import Log from './Log';
+import Sin from './Sin';
+import Button from 'react-bootstrap/Button';
+
+
+const Navbar = () => {
+  const [show,setShow]=useState(false);
+    const [popup,setPopup]=useState(false);
+  const [openMenu, setOpenMenu] = useState(false);
+  const menuOptions = [
+    {
+      text: "Home",
+      icon: <HomeIcon />,
+    },
+    {
+      text: "About",
+      icon: <InfoIcon />,
+    },
+    {
+      text: "Testimonials",
+      icon: <CommentRoundedIcon />,
+    },
+    {
+      text: "Cart",
+      icon: <ShoppingCartRoundedIcon />,
+    },
+    
+  ];
+  return (
+    <>
+    <nav>
+      
+    </nav>
+    <Log 
+     show={show}
+     setShow={setShow}
+     />
+   <Sin
+    popup={popup}
+    setPopup={setPopup}
+   />
+    </>
+  );
+};
+
+export default Navbar;
